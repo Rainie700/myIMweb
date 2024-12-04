@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資訊管理學系</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>資訊管理學系</h1>
+        <nav>
+            <ul class="main-menu">
+                <li class="dropdown">
+                    <a href="#">課程介紹</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="courses-year1.html">大一</a></li>
+                        <li><a href="courses-year2.html">大二</a></li>
+                        <li><a href="courses-year3.html">大三</a></li>
+                        <li><a href="courses-year4.html">大四</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">師資介紹</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="faculty-fulltime.html">專任師資</a></li>
+                        <li><a href="faculty-parttime.html">兼任師資</a></li>
+                        <li><a href="faculty-project.html">專案計畫師資</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">學生事務</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="student-undergrad.html">大學部</a></li>
+                        <li><a href="student-master.html">碩士班</a></li>
+                        <li><a href="student-phd.html">博士班</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">招生資訊</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="admission-announcements.html">招生公告</a></li>
+                        <li><a href="admission-undergrad.html">大學部招生</a></li>
+                        <li><a href="admission-master.html">碩士班招生</a></li>
+                        <li><a href="admission-phd.html">博士班招生</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">系友專區</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="alumni-announcements.html">系友會公告</a></li>
+                        <li><a href="alumni-page.html">系友會粉絲專頁</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#">聯絡我們</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="contact.html">聯絡我們</a></li>
+                    </ul>
+                </li>
+        </nav>
+        
+        <!-- 回首頁 | English -->
+        <div class="top-links">
+            <a href="index.html">回首頁</a> | <a href="index-en.html">English</a>
+        </div>
+
+        <!-- 搜尋欄位 -->
+        <form action="search_results.html" method="GET" class="search-form">
+            <input type="text" name="query" placeholder="搜尋..." required>
+            <button type="submit">搜尋</button>
+        </form>
+    </header>
+    
+    <main>
+      <!-- 圖片跑馬燈 -->
+        <div class="carousel">
+            <div class="carousel-images">
+                <a href="courses-year1.html" target="_blank"><img src="images/image1.jpg" alt="Image 1"></a>
+                <a href="faculty-fulltime.html" target="_blank"><img src="images/image2.jpg" alt="Image 2"></a>
+                <a href="event1.html" target="_blank"><img src="images/image3.jpg" alt="Image 3"></a>
+                <a href="courses-year1.html"><img src="images/image1.jpg" alt="Image 1"></a>
+                <a href="faculty-fulltime.html"><img src="images/image2.jpg" alt="Image 2"></a>
+                <a href="event1.html"><img src="images/image3.jpg" alt="Image 3"></a>
+            </div>
+        </div>
+
+      <!-- end of 圖片跑馬燈 -->
+
+        <section>
+            <h2>歡迎來到資訊管理學系網站</h2>
+            <p>本系致力於培養具備資訊技術與管理專業知識的優秀人才，讓學生在數位轉型與資訊管理領域中，掌握未來所需的核心技能，並成為業界的創新領袖。</p>
+        </section>
+
+        <section id="news">
+            <h2>最新消息</h2>
+            <ul>
+                <li><a href="event1.html">活動公告：資訊管理學系講座</a></li>
+                <li><a href="job1.html">徵才消息：系所行政助理招聘</a></li>
+                <li><a href="competition1.html">系外競賽：全國程式設計競賽</a></li>
+            </ul>
+        </section>
+
+        <section id="department-features">
+            <h2>系所特色</h2>
+            <ul>
+                <li><a href="education-goals.html">教育目標</a></li>
+                <li><a href="administrative-team.html">行政團隊</a></li>
+                <li><a href="future-development.html">未來發展</a></li>
+                <li><a href="core-competencies.html">核心能力</a></li>
+                <li><a href="facilities.html">設備與設施</a></li>
+                <li><a href="internship.html">就業實習</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 資訊管理學系</p>
+        <p>追蹤我們：</p>
+        <ul>
+            <li><a href="https://www.instagram.com/tkuim" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/tkuim" target="_blank">YouTube</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // 圖片跑馬燈 JavaScript
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-images img');
+
+        function showNextImage() {
+            images[currentIndex].classList.remove('visible');
+            currentIndex = (currentIndex + 1) % images.length;
+            images[currentIndex].classList.add('visible');
+        }
+
+        setInterval(showNextImage, 3000);
+    </script>
+</body>
+</html>
+
+

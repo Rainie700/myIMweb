@@ -1,0 +1,456 @@
+/* 全局樣式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* 頁首樣式 */
+header {
+    background-color: #B5A8A0;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 導航欄 */
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #B5A8A0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 主要內容區 */
+main {
+    padding: 20px;
+    background-color: #edede9;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* 底部 */
+footer {
+    background-color: #B5A8A0;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 公告區塊樣式 */
+#news {
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+#news h2 {
+    color: #2c3e50;
+}
+
+#news ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#news ul li {
+    margin-bottom: 10px;
+}
+
+#news ul li a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+#news ul li a:hover {
+    text-decoration: underline;
+}
+
+/* 系所特色區塊 */
+#department-features {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f2f2f2;
+    border-radius: 8px;
+}
+
+#department-features h2 {
+    color: #34495e;
+}
+
+#department-features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#department-features ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 課程介紹區塊 */
+#courses {
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#courses h2 {
+    color: #393C60;
+}
+
+#courses ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#courses ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* 表單區塊 */
+#contact-form {
+    padding: 20px;
+    background-color: #ecf0f1;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+}
+
+#contact-form button {
+    background-color: #2980b9;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+}
+
+#contact-form button:hover {
+    background-color: #3498db;
+}
+
+/* 課程介紹美化 */
+.course {
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.course h4 {
+    font-size: 1.3em;
+    color: #333;
+}
+
+.course p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.course strong {
+    color: #333;
+}
+
+/* 課程分類標題底色 */
+h3 {
+    color: #ffffff; /* 字體顏色設為白色 */
+    background-color: #BF9FA6; /* 背景顏色設為棕色 */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* faculty.html 中的 h3 樣式 */
+#faculty-header {
+    background-color: transparent; /* 去掉底色 */
+    color: #333; /* 文字顏色 */
+}
+
+/* faculty 頁面中的 h3 標題對齊 */
+#faculty-page h3 {
+    text-align: left; /* 讓教授的名字靠左對齊 */
+    margin-left: 0;
+}
+
+/* 課程頁面中 h3 樣式 */
+#courses h3 {
+    color: #ffffff; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #BF9FA6; /* 背景顏色 */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* 學生事務 h3 樣式 */
+#affairs h3 {
+    color: #443C3C; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #D0CBCB; /* 背景顏色 */
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block; /* 使背景色只在文字區域 */
+}
+
+/*招生公告 h3 樣式*/
+#admission-ann h3 {
+    color: #443C3C; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #D0CBCB; /* 背景顏色 */
+    padding: 8px;/*文字與邊框之間的空間*/
+    border-radius: 5px;/*邊框的圓角效果*/
+    display: inline-block; /* 使背景色只在文字區域 */
+}
+
+/*招生資訊 h3 樣式*/
+#admission h3 {
+    background-color: transparent; /* 去掉底色 */
+    color: #443C3C; /* 文字顏色 */
+}
+
+/*系友專區 h3 樣式*/
+#alumni h3 {
+    color: #ffffff; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #BF9FA6; /* 背景顏色 */
+    padding: 8px;/*文字與邊框之間的空間*/
+    border-radius: 5px;/*邊框的圓角效果*/
+    display: inline-block; /* 使背景色只在文字區域 */
+}
+
+/* 系友粉絲專業中的 h3 樣式 */
+#alumni-page h3 {
+    color: #333; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #D0CBCB; /* 背景顏色 */
+    padding: 3px;/*文字與邊框之間的空間*/
+}
+
+/* 搜尋欄的樣式 */
+.search-form {
+    display: inline-flex; /* 設定為 inline-flex 讓搜尋框顯示在一行，並且可以使用 flexbox 來對齊內容 */
+    align-items: center; /* 垂直置中搜尋框內的內容（例如文字和按鈕） */
+    background-color: #B5A8A0; /* 設定搜尋框背景顏色 */
+    border-radius: 3px; /* 給搜尋框外圍添加圓角 */
+    padding: 3px; /* 設定搜尋框的內邊距，讓內部元素不會緊貼邊緣 */
+    margin-left: 80vw;
+    margin-top: 5px;  /* 設定搜尋框距離上方元素的距離，用來微調搜尋框的位置 */
+}
+
+.search-form input {
+    padding: 8px; /* 設定輸入框內部的間距，讓文字不會貼近邊緣 */
+    border: 1px solid #ccc; /* 設定輸入框的邊框顏色為灰色 */
+    border-radius: 10px; /* 給輸入框設置圓角，讓邊角更加圓滑 */
+    width: 200px; /* 設定輸入框的寬度為 200px */
+}
+
+.search-form button {
+    padding: 8px 12px; /* 設定按鈕的內邊距，使按鈕內部的文字不會貼近邊緣 */
+    background-color: #705C53; /* 設定按鈕的背景顏色為棕色調 */
+    color: white; /* 設定按鈕中文字顏色為白色 */
+    border: none; /* 移除按鈕的邊框 */
+    border-radius: 5px; /* 給按鈕添加圓角，讓按鈕的外觀更柔和 */
+    cursor: pointer; /* 設定鼠標懸停在按鈕上時顯示為手指狀，表示該元素是可點擊的 */
+}
+
+
+.search-form button:hover {
+    background-color: #3498db; /* 當鼠標懸停在按鈕上時，改變按鈕的背景顏色為藍色 */
+}
+
+/* 回首頁 | English的樣式 */
+.top-links {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 14px;
+}
+
+    .top-links a {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+
+        .top-links a:hover {
+            text-decoration: underline;
+        }
+.top-bar {
+    text-align: right;
+    padding: 10px 20px;
+    background-color: #B5A8A0; /* 根據頁面樣式調整背景色 */
+    color: #fff;
+}
+
+    .top-bar a {
+        color: #fff;
+        margin-left: 15px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+/* 講師照片的樣式 */
+.faculty-photo {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+.professor {
+    text-align: left; /* 確保內容居中 */
+    margin-bottom: 30px; /* 調整每個教授的區塊之間的距離 */
+}
+
+
+/* 主選單樣式 */
+ul.main-menu {
+    display: flex;
+    justify-content: center; /* 讓選單項目置中 */
+    list-style-type: none;
+    padding: 0;
+    background-color: #B5A8A0; /* 可調整背景色 */
+}
+
+    ul.main-menu li {
+        position: relative;
+        margin: 0 15px; /* 調整間距 */
+    }
+
+    ul.main-menu a {
+        text-decoration: none;
+        color: #fff; /* 字體顏色 */
+        padding: 10px 15px; /* 填充 */
+        display: block;
+    }
+
+/* 下拉選單樣式 */
+ul.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* 從父項的底部顯示 */
+    left: 0;
+    background-color: #ffffff; /* 下拉背景色 */
+    min-width: 150px; /* 最小寬度 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+    z-index: 1;
+}
+
+    ul.dropdown-menu li {
+        margin: 0;
+    }
+
+    ul.dropdown-menu a {
+        color: #333; /* 下拉選單字體顏色 */
+        padding: 10px;
+        display: block;
+    }
+
+        ul.dropdown-menu a:hover {
+            background-color: #f2f2f2; /* 滑鼠懸停時背景色 */
+        }
+
+/* 鼠標懸停時顯示下拉選單 */
+.main-menu li:hover .dropdown-menu {
+    display: block;
+}
+
+/*圖片跑馬燈*/
+.carousel {
+    width: 100%; /* 確保跑馬燈寬度佔滿容器 */
+    overflow: hidden; /* 隱藏超出容器範圍的部分 */
+    position: relative; /* 為定位子元素提供參考 */
+    height: 40vh; /* 設定跑馬燈容器的高度，使圖片條更矮 (40vh)*/
+}
+
+.carousel-images {
+    display: flex; /* 設定為彈性盒模型，使圖片排列成一排 */
+    transition: transform 1s ease; /* 使圖片變換時有平滑效果 */
+    width: 300%; /* 根據圖片數量調整，這裡有 3 張圖片 */
+}
+
+.carousel img {
+    width: 100%; /* 每張圖片寬度佔滿跑馬燈容器 */
+    height: auto; /* 保持圖片的比例 */
+    display: block;
+    margin: 0 auto; /* 讓圖片置中 */
+}
+.carousel img {
+    width: 50%; /* 調整為較小的百分比，控制圖片的寬度 */
+    height: auto; /* 保持圖片比例 */
+    display: block;
+    margin: 0 auto; /* 讓圖片置中 */
+}
+.carousel-images img {
+    width: 100%;
+    display: none; /* 預設所有圖片隱藏 */
+}
+
+.carousel-images img.visible {
+    display: block; /* 只有加上 .visible 類別的圖片顯示 */
+}
+
+
+
+
+/* 課程頁面中 h3 樣式保持原樣 */
+#student-undergrad h3 {
+    background-color: transparent; /* 去掉底色 */
+    color: #333; /* 文字顏色 */
+}
+
+/* 調整li行距 */
+li {
+    margin-bottom: 12px; /* 增加每個列表項目的底部間距 */
+}
+
