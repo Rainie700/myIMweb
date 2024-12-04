@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
     <title>資訊管理學系</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,17 +24,42 @@
                 <li class="dropdown">
                     <a href="#">師資介紹</a>
                     <ul class="dropdown-menu">
-                        <li><a href="faculty-fulltime.html">專任師資</a></li>
-                        <li><a href="faculty-parttime.html">兼任師資</a></li>
-                        <li><a href="faculty-project.html">專案計畫師資</a></li>
+                        <li><a href="faculty-professor.html">教授</a></li>
+                        <li><a href="faculty-associateProfessor.html">副教授</a></li>
+                        <li><a href="faculty-assistantProfessor.html">助理教授</a></li>
+                        <li><a href="faculty-lecturer.html">講師</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#">學生事務</a>
                     <ul class="dropdown-menu">
-                        <li><a href="student-undergrad.html">大學部</a></li>
-                        <li><a href="student-master.html">碩士班</a></li>
-                        <li><a href="student-phd.html">博士班</a></li>
+                        <li class = "dropdown">
+                            <a href="student-undergrad.html">畢業專題</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="student-undergrad.html#JT-1">畢業專題簡介</a></li>
+                                <li><a href="student-undergrad.html#JT-2">辦理方式</a></li>
+                                <li><a href="student-undergrad.html#JT-3">經費運用說明</a></li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="student-master.html">實習</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="student-master.html#SS-1">實習流程</a></li>
+                                <li><a href="student-master.html#SS-2">檔案下載</a></li>
+                                <li><a href="student-master.html#SS-3">實習企業公告</a></li>
+                                <li><a href="student-master.html#SS-4">實習機會</a></li>
+                            </ul>
+                        </li>
+                        <li class = "dropdown">
+                            <a href="student-phd.html">研究生</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="student-phd.html#YJ-1">研究所事務指南</a></li>
+                                <li><a href="student-phd.html#YJ-2">計劃書</a></li>
+                                <li><a href="student-phd.html#YJ-3">學位口試相關</a></li>
+                                <li><a href="student-phd.html#YJ-4">口試提報</a></li>
+                                <li><a href="student-phd.html#YJ-5">離校須知</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -42,7 +68,7 @@
                         <li><a href="admission-announcements.html">招生公告</a></li>
                         <li><a href="admission-undergrad.html">大學部招生</a></li>
                         <li><a href="admission-master.html">碩士班招生</a></li>
-                        <li><a href="admission-phd.html">博士班招生</a></li>
+                        <li><a href="admission-phd.html">碩士在職專班招生</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -56,13 +82,14 @@
                     <a href="#">聯絡我們</a>
                     <ul class="dropdown-menu">
                         <li><a href="contact.html">聯絡我們</a></li>
+                        <li><a href="contact2.html">系所聯絡資訊</a></li>
                     </ul>
                 </li>
         </nav>
         
         <!-- 回首頁 | English -->
         <div class="top-links">
-            <a href="index.html">回首頁</a> | <a href="index-en.html">English</a>
+            <a href="index.html">回首頁</a>      |<a href="index-en.html">English</a>
         </div>
 
         <!-- 搜尋欄位 -->
@@ -77,11 +104,13 @@
         <div class="carousel">
             <div class="carousel-images">
                 <a href="courses-year1.html" target="_blank"><img src="images/image1.jpg" alt="Image 1"></a>
-                <a href="faculty-fulltime.html" target="_blank"><img src="images/image2.jpg" alt="Image 2"></a>
-                <a href="event1.html" target="_blank"><img src="images/image3.jpg" alt="Image 3"></a>
+                <a href="faculty-professor.html" target="_blank"><img src="images/image2o.jpg" alt="Image 2o"></a>           
+                <a href="event1.html" target="_blank"><img src="images/image3o.jpg" alt="Image 3o"></a>
+
                 <a href="courses-year1.html"><img src="images/image1.jpg" alt="Image 1"></a>
-                <a href="faculty-fulltime.html"><img src="images/image2.jpg" alt="Image 2"></a>
-                <a href="event1.html"><img src="images/image3.jpg" alt="Image 3"></a>
+                <a href="faculty-professor.html"><img src="images/image2o.jpg" alt="Image 2o"></a>
+                <a href="event1.html"><img src="images/image3o.jpg" alt="Image 3o"></a>
+
             </div>
         </div>
 
@@ -95,9 +124,9 @@
         <section id="news">
             <h2>最新消息</h2>
             <ul>
-                <li><a href="event1.html">活動公告：資訊管理學系講座</a></li>
-                <li><a href="job1.html">徵才消息：系所行政助理招聘</a></li>
-                <li><a href="competition1.html">系外競賽：全國程式設計競賽</a></li>
+                <li><a href="event1.html">實習公告：2025年度境外實習第二波職缺申請說明</a></li>
+                <li><a href="job1.html">徵才消息：布爾喬亞公關顧問招聘</a></li>
+                <li><a href="competition1.html">畢業專題成果展：《與AI同行:未來的共創者》</a></li>
             </ul>
         </section>
 
@@ -109,7 +138,7 @@
                 <li><a href="future-development.html">未來發展</a></li>
                 <li><a href="core-competencies.html">核心能力</a></li>
                 <li><a href="facilities.html">設備與設施</a></li>
-                <li><a href="internship.html">就業實習</a></li>
+                <li><a href="internship.html">就業實習分享</a></li>
             </ul>
         </section>
     </main>
@@ -118,8 +147,8 @@
         <p>&copy; 2024 資訊管理學系</p>
         <p>追蹤我們：</p>
         <ul>
-            <li><a href="https://www.instagram.com/tkuim" target="_blank">Instagram</a></li>
-            <li><a href="https://www.youtube.com/tkuim" target="_blank">YouTube</a></li>
+            <li><a href="https://www.instagram.com/shu_mis33th/" target="_blank">Instagram</a></li>
+            <li><a href="https://www.youtube.com/channel/UCcw5VoSUOJsbx7g7XItD3PA" target="_blank">YouTube</a></li>
         </ul>
     </footer>
 
@@ -127,6 +156,17 @@
         // 圖片跑馬燈 JavaScript
         let currentIndex = 0;
         const images = document.querySelectorAll('.carousel-images img');
+
+        // 預先加載圖片(新增)
+        const preloadImages = () => {
+            images.forEach((image) => {
+                const img = new Image();
+                img.src = image.src;
+            });
+        };
+
+        // 執行預加載(新增)
+        preloadImages();
 
         function showNextImage() {
             images[currentIndex].classList.remove('visible');
@@ -138,5 +178,4 @@
     </script>
 </body>
 </html>
-
 
