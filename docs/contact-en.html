@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Contact Us - Department of Information Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // JavaScript Code
+        function showConfirmation() {
+            // Hide the form and display the confirmation message
+            document.getElementById("contact-form").style.display = "none";  // Hide the form
+            document.getElementById("confirmation").style.display = "block"; // Show the confirmation message
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Contact Us</h1>
+
+        <nav>
+            <ul>
+                <li><a href="contact-en.html">Contact Us</a></li>
+                <li><a href="contact2-en.html">Department Contact Information</a></li>
+            </ul>
+        </nav>
+        
+        <nav class="top-bar">
+            <a href="index-en.html">Home</a> | <a href="contact.html">Chinese</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Display the confirmation message -->
+        <section id="confirmation" style="display: none;">
+            <h2>Thank you for your message! We have received your inquiry.</h2>
+        </section>
+
+        <!-- Contact Form -->
+        <section id="contact-form">
+            <h2>Contact Form</h2>
+            <form action="javascript:void(0);" method="POST" onsubmit="showConfirmation()">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Department of Information Management</p>
+    </footer>
+</body>
+</html>
