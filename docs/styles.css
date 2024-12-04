@@ -62,6 +62,7 @@ footer {
     text-align: center;
     padding: 10px;
     width: 100%;
+    box-sizing: border-box; /* 使 padding 包括在內 */
 }
 
 footer ul {
@@ -220,6 +221,12 @@ h3 {
     color: #333; /* 文字顏色 */
 }
 
+/* eventl.html 中的 h3 樣式 */
+#event h3 {
+    background-color: transparent; /* 去掉底色 */
+    color: #333; /* 文字顏色 */
+}
+
 /* faculty 頁面中的 h3 標題對齊 */
 #faculty-page h3 {
     text-align: left; /* 讓教授的名字靠左對齊 */
@@ -258,6 +265,19 @@ h3 {
     color: #443C3C; /* 文字顏色 */
 }
 
+/* admission-ann1~3.html 中的 h3 樣式 */
+#admission-ann1 h3 {
+    background-color: transparent; /* 去掉底色 */
+    color: #333; /* 文字顏色 */
+}
+#admission-ann2 h3 {
+    background-color: transparent; /* 去掉底色 */
+    color: #333; /* 文字顏色 */
+}
+#admission-ann3 h3 {
+    background-color: transparent; /* 去掉底色 */
+    color: #333; /* 文字顏色 */
+}
 /*系友專區 h3 樣式*/
 #alumni h3 {
     color: #ffffff; /* 如果需要保持底色，可以用此樣式 */
@@ -281,8 +301,10 @@ h3 {
     background-color: #B5A8A0; /* 設定搜尋框背景顏色 */
     border-radius: 3px; /* 給搜尋框外圍添加圓角 */
     padding: 3px; /* 設定搜尋框的內邊距，讓內部元素不會緊貼邊緣 */
-    margin-left: 80vw;
-    margin-top: 5px;  /* 設定搜尋框距離上方元素的距離，用來微調搜尋框的位置 */
+    margin-left: 73vw;
+    max-width: calc(100% - 73vw); /* 確保搜尋框不會超出螢幕 */
+    margin-top: 5px; /* 設定搜尋框距離上方元素的距離，用來微調搜尋框的位置 */
+    box-sizing: border-box; /* 確保 padding 和 border 包括在內 */
 }
 
 .search-form input {
@@ -290,6 +312,9 @@ h3 {
     border: 1px solid #ccc; /* 設定輸入框的邊框顏色為灰色 */
     border-radius: 10px; /* 給輸入框設置圓角，讓邊角更加圓滑 */
     width: 200px; /* 設定輸入框的寬度為 200px */
+    max-width: 100%; /* 防止超出 */
+
+    /*flex-grow: 1;*//*輸入框佔據剩餘空間*/
 }
 
 .search-form button {
@@ -299,6 +324,11 @@ h3 {
     border: none; /* 移除按鈕的邊框 */
     border-radius: 5px; /* 給按鈕添加圓角，讓按鈕的外觀更柔和 */
     cursor: pointer; /* 設定鼠標懸停在按鈕上時顯示為手指狀，表示該元素是可點擊的 */
+
+
+    max-width: 100%; /* 確保按鈕不會超出容器 */
+    flex-shrink: 0;  /*防止按鈕縮小 */
+    box-sizing: border-box; /* 確保 padding 和 border 包括在內 */
 }
 
 
@@ -306,151 +336,244 @@ h3 {
     background-color: #3498db; /* 當鼠標懸停在按鈕上時，改變按鈕的背景顏色為藍色 */
 }
 
-/* 回首頁 | English的樣式 */
-.top-links {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 14px;
-}
-
-    .top-links a {
-        color: #fff;
-        text-decoration: none;
-        margin-left: 10px;
+/* 手機響應式樣式(新增) */
+@media screen and (max-width: 768px) {
+    .search-form {
+        top: 10px; /* 在手機上稍微下移 */
+        left: 70%; /* 略微調整相對位置 */
+        transform: translateX(-50%); /* 確保仍然居中 */
+        width: 95%; /* 搜尋欄佔據大部分螢幕寬度 */
     }
 
-        .top-links a:hover {
-            text-decoration: underline;
+    .search-form input {
+        width: 60%; /* 輸入框寬度在窄螢幕上調整 */
+        max-width: calc(100% - 100px); /* 留出按鈕空間 */
+    }
+
+    .search-form button {
+        width: auto; /* 保持按鈕大小 */
+        padding: 0.5rem; /* 減小內邊距 */
+    }
+}
+
+
+
+    /* 回首頁 | English的樣式 */
+    .top-links {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 14px;
+    }
+
+        .top-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
         }
-.top-bar {
-    text-align: right;
-    padding: 10px 20px;
-    background-color: #B5A8A0; /* 根據頁面樣式調整背景色 */
-    color: #fff;
-}
 
-    .top-bar a {
+            .top-links a:hover {
+                text-decoration: underline;
+            }
+
+    .top-bar {
+        text-align: right;
+        padding: 10px 20px;
+        background-color: #B5A8A0; /* 根據頁面樣式調整背景色 */
         color: #fff;
-        margin-left: 15px;
-        text-decoration: none;
-        font-size: 16px;
     }
 
-        .top-bar a:hover {
-            text-decoration: underline;
+        .top-bar a {
+            color: #fff;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 16px;
         }
 
-/* 講師照片的樣式 */
-.faculty-photo {
-    width: 150px;
-    height: auto;
-    display: block;
-}
-.professor {
-    text-align: left; /* 確保內容居中 */
-    margin-bottom: 30px; /* 調整每個教授的區塊之間的距離 */
-}
+            .top-bar a:hover {
+                text-decoration: underline;
+            }
 
-
-/* 主選單樣式 */
-ul.main-menu {
-    display: flex;
-    justify-content: center; /* 讓選單項目置中 */
-    list-style-type: none;
-    padding: 0;
-    background-color: #B5A8A0; /* 可調整背景色 */
-}
-
-    ul.main-menu li {
-        position: relative;
-        margin: 0 15px; /* 調整間距 */
-    }
-
-    ul.main-menu a {
-        text-decoration: none;
-        color: #fff; /* 字體顏色 */
-        padding: 10px 15px; /* 填充 */
+    /* 講師照片的樣式 */
+    .faculty-photo {
+        width: 150px;
+        height: auto;
         display: block;
     }
 
-/* 下拉選單樣式 */
-ul.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; /* 從父項的底部顯示 */
-    left: 0;
-    background-color: #ffffff; /* 下拉背景色 */
-    min-width: 150px; /* 最小寬度 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 陰影效果 */
-    z-index: 1;
-}
-
-    ul.dropdown-menu li {
-        margin: 0;
+    .professor {
+        text-align: left; /* 確保內容居中 */
+        margin-bottom: 30px; /* 調整每個教授的區塊之間的距離 */
     }
 
-    ul.dropdown-menu a {
-        color: #333; /* 下拉選單字體顏色 */
-        padding: 10px;
-        display: block;
+
+    /* 主選單樣式 */
+    ul.main-menu {
+        display: flex;
+        justify-content: center; /* 讓選單項目置中 */
+        list-style-type: none;
+        padding: 0;
+        background-color: #B5A8A0; /* 可調整背景色 */
     }
 
-        ul.dropdown-menu a:hover {
-            background-color: #f2f2f2; /* 滑鼠懸停時背景色 */
+        ul.main-menu li {
+            position: relative;
+            margin: 0 15px; /* 調整間距 */
         }
 
-/* 鼠標懸停時顯示下拉選單 */
-.main-menu li:hover .dropdown-menu {
+        ul.main-menu a {
+            text-decoration: none;
+            color: #fff; /* 字體顏色 */
+            padding: 10px 15px; /* 填充 */
+            display: block;
+        }
+
+    /* 下拉選單樣式 */
+    ul.dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%; /* 從父項的底部顯示 */
+        left: 0;
+        background-color: #ffffff; /* 下拉背景色 */
+        min-width: 150px; /* 最小寬度 */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* 陰影效果 */
+        z-index: 1;
+    }
+
+/* 子選單的樣式 *//* 新增 */
+ul.dropdown-menu .dropdown-menu {
+    top: 0; /* 與父項對齊 */
+    left: 100%; /* 顯示在右側 */
+}
+
+        ul.dropdown-menu li {
+            margin: 0;
+        }
+
+        ul.dropdown-menu a {
+            color: #333; /* 下拉選單字體顏色 */
+            padding: 10px;
+            display: block;
+            text-decoration: none; /* 移除連結下劃線 *//* 新增 */
+        }
+
+            ul.dropdown-menu a:hover {
+                background-color: #f2f2f2; /* 滑鼠懸停時背景色 */
+            }
+
+    /* 鼠標懸停時顯示下拉選單 *//* 新增 > */
+    .main-menu li:hover > .dropdown-menu {
+        display: block;
+    }
+/* 鼠標懸停時顯示第二層下拉選單 *//* 新增 */
+ul.dropdown-menu li:hover > .dropdown-menu {
     display: block;
 }
 
-/*圖片跑馬燈*/
+    /*圖片跑馬燈*/
 .carousel {
-    width: 100%; /* 確保跑馬燈寬度佔滿容器 */
-    overflow: hidden; /* 隱藏超出容器範圍的部分 */
-    position: relative; /* 為定位子元素提供參考 */
-    height: 40vh; /* 設定跑馬燈容器的高度，使圖片條更矮 (40vh)*/
+    width: 100%; /* 寬度自動填滿父容器 */
+    max-width: 100vw; /* 最大寬度限制為視窗寬度 */
+    height: auto; /* 高度為視窗高度的 40% */
+    margin: 0 auto; /* 水平居中 */
+    overflow: hidden; /* 隱藏溢出的內容 */
+    position: relative; /* 為子元素提供定位參考 */
+    display: flex; /* 使用 Flexbox 幫助內容居中 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
 }
 
 .carousel-images {
-    display: flex; /* 設定為彈性盒模型，使圖片排列成一排 */
-    transition: transform 1s ease; /* 使圖片變換時有平滑效果 */
-    width: 300%; /* 根據圖片數量調整，這裡有 3 張圖片 */
+    display: flex; /* 彈性盒模型排列圖片 */
+    transition: transform 1s ease; /* 平滑切換效果 */
+    width: 300%; /* 根據圖片數量調整寬度 */
+    height: 100%; /* 使用圖片自身高度 */
+    align-items: center; /* 保持圖片垂直居中 */
 }
 
-.carousel img {
-    width: 100%; /* 每張圖片寬度佔滿跑馬燈容器 */
-    height: auto; /* 保持圖片的比例 */
-    display: block;
-    margin: 0 auto; /* 讓圖片置中 */
-}
-.carousel img {
-    width: 50%; /* 調整為較小的百分比，控制圖片的寬度 */
-    height: auto; /* 保持圖片比例 */
-    display: block;
-    margin: 0 auto; /* 讓圖片置中 */
-}
 .carousel-images img {
-    width: 100%;
-    display: none; /* 預設所有圖片隱藏 */
+    flex: 0 0 auto; /* 固定每張圖片大小 */
+    max-width: 100%; /* 圖片寬度不超過容器 */
+    max-height: 100%; /* 圖片高度不超過容器 */
+    object-fit: contain; /* 確保圖片完整顯示且保持比例 */
+    width: auto; /* 自動調整寬度以保持比例 */
+    height: auto; /* 自動調整高度以保持比例 */
+    margin: auto; /* 讓圖片居中 */
+    display: none; /* 預設隱藏所有圖片 */
 }
 
 .carousel-images img.visible {
-    display: block; /* 只有加上 .visible 類別的圖片顯示 */
+    display: block; /* 只有 .visible 類別的圖片顯示 */
+}
+@media screen and (max-width: 768px) {
+    .carousel {
+        width: 95%; /* 手機裝置佔更大比例 */
+        height: 50vh; /* 調高高度讓圖片更明顯 */
+    }
 }
 
 
 
 
-/* 課程頁面中 h3 樣式保持原樣 */
-#student-undergrad h3 {
-    background-color: transparent; /* 去掉底色 */
-    color: #333; /* 文字顏色 */
+
+    /* 課程頁面中 h3 樣式保持原樣 */
+    #student-undergrad h3 {
+        background-color: transparent; /* 去掉底色 */
+        color: #333; /* 文字顏色 */
+    }
+
+    /* 調整li行距 */
+    li {
+        margin-bottom: 12px; /* 增加每個列表項目的底部間距 */
+    }
+
+
+
+    .search-bar {
+        max-width: 100%; /* 保證不超過父容器的寬度 */
+        width: 100%;
+        box-sizing: border-box; /* 包括 padding 和 border 在內 */
+    }
+
+
+
+    /*檢查是否有超出頁面的元素*/
+    /**{
+    outline: solid #f00 1px !important;
+    background: #000 !important;
+    color: #fff !important;
+}*/
+
+
+
+
+.faculty-member {
+    padding-bottom: 20px; /* 增加每個講師區塊的底部間距 */
+    position: relative;
 }
 
-/* 調整li行距 */
-li {
-    margin-bottom: 12px; /* 增加每個列表項目的底部間距 */
+#JT-1, #JT-2, #JT-3 {
+    color: #443C3C; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #D0CBCB; /* 背景顏色 */
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block; /* 使背景色只在文字區域 */
 }
+#SS-1, #SS-2, #SS-3, #SS-4 {
+    color: #443C3C; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #D0CBCB; /* 背景顏色 */
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block; /* 使背景色只在文字區域 */
+}
+#YJ-1, #YJ-2, #YJ-3, #YJ-4, #YJ-5 {
+    color: #443C3C; /* 如果需要保持底色，可以用此樣式 */
+    background-color: #D0CBCB; /* 背景顏色 */
+    padding: 8px;
+    border-radius: 5px;
+    display: inline-block; /* 使背景色只在文字區域 */
+}
+
+
+
 
